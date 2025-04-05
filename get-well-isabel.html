@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Get Well Soon Isabel</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #ffe6f0; /* Soft pink */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .message {
+      color: #cc3366;
+      font-size: 2em;
+      line-height: 1.5;
+      max-width: 90%;
+      margin-bottom: 30px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .message strong {
+      font-weight: bold;
+    }
+
+    .reveal-btn {
+      padding: 12px 25px;
+      background-color: #cc3366;
+      border: none;
+      color: #fff;
+      font-size: 1em;
+      border-radius: 25px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease;
+    }
+
+    .reveal-btn:hover {
+      background-color: #a32950;
+    }
+
+    .gif-container {
+      display: none;
+      margin-top: 30px;
+      animation: fadeInImage 1.5s ease forwards;
+    }
+
+    .gif-container img {
+      width: 300px;
+      max-width: 90%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInImage {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @media (max-width: 600px) {
+      .message {
+        font-size: 1.5em;
+      }
+
+      .reveal-btn {
+        font-size: 0.9em;
+        padding: 10px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="message">
+    Get well soon, <strong>Isabel</strong>!<br>
+    Wishing you a speedy recovery,<br>
+    and always remember —<br>
+    <strong>you’re stronger than you actually know.</strong>
+  </div>
+
+  <button class="reveal-btn" onclick="document.querySelector('.gif-container').style.display='block';">
+    Click me for a surprise
+  </button>
+
+  <div class="gif-container">
+    <img src="https://i.pinimg.com/originals/2f/16/ff/2f16ffcabad3879ff0f321e2be4b703f.gif" alt="Get Well Soon GIF" />
+  </div>
+
+</body>
+</html>
